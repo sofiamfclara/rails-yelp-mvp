@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="p-5">
+    <h1 class="pb-4">Add a new Restaurant</h1>
+    <%= simple_form_for(@restaurant) do |f| %>
+      <strong><%= f.input :name %></strong>
+      <strong><%= f.input :address %></strong>
+      <strong><%= f.input :phone_number %></strong>
+      <strong><%= f.label :category %></strong>
+      <%= f.input :category, as: :select, collection: ["chinese", "italian", "japanese", "french", "belgian"], prompt: 'Select Category', label: false %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
